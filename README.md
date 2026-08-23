@@ -28,3 +28,8 @@ Naslovne fotografije u dijelu Naše usluge zamijenjene su novim slikama. Fotogra
 - Statistika je na mobitelu prikazana kompaktnije.
 - Kartice „Kako radimo“ su na mobitelu raspoređene 2 × 2 i zauzimaju manje prostora.
 - Uklonjena je duplicirana fotografija kliznog ormara iz kategorije „Sobe i ormari po mjeri“.
+
+## Verzija 13
+- Privremeni kontakt e-mail: `krunoslav.hegedic@gmail.com`.
+- Uklonjene su poslovne e-mail adrese na `@domus-modus.hr`.
+- Provjeren je vidljivi naziv brenda: `Modus Domus`.

@@ -23,7 +23,7 @@ const translations = {
     stepFour:"Dostava i montaža", stepFourText:"Završavamo projekt profesionalnom montažom na lokaciji.",
     contactKicker:"POKRENIMO PROJEKT", contactTitle:"Imate ideju? Pretvorimo je u prostor po vašoj mjeri.",
     contactText:"Pošaljite nam osnovne informacije, fotografije ili dimenzije prostora. Javit ćemo vam se radi dogovora.",
-    phoneLabel:"Voditelj poslovanja · Telefon / WhatsApp", managerEmailLabel:"Direktan e-mail voditelja poslovanja", offersLabel:"Ponude i upiti", ownerLabel:"Voditelj poslovanja",
+    phoneLabel:"Voditelj poslovanja · Telefon / WhatsApp", emailLabel:"E-mail", ownerLabel:"Voditelj poslovanja",
     openWhatsapp:"Otvori WhatsApp razgovor →", rights:"Sva prava pridržana.",
     footerCoverage:"Poslujemo u Hrvatskoj, Europskoj uniji i Švicarskoj."
   },
@@ -51,7 +51,7 @@ const translations = {
     stepFour:"Delivery and installation", stepFourText:"We complete the project with professional on-site installation.",
     contactKicker:"START YOUR PROJECT", contactTitle:"Have an idea? Let us turn it into a space made for you.",
     contactText:"Send us basic information, photos or room dimensions. We will contact you to discuss the next steps.",
-    phoneLabel:"Business manager · Phone / WhatsApp", managerEmailLabel:"Direct business manager email", offersLabel:"Quotes and enquiries", ownerLabel:"Business manager",
+    phoneLabel:"Business manager · Phone / WhatsApp", emailLabel:"Email", ownerLabel:"Business manager",
     openWhatsapp:"Open WhatsApp chat →", rights:"All rights reserved.",
     footerCoverage:"We operate in Croatia, the European Union and Switzerland."
   },
@@ -79,7 +79,7 @@ const translations = {
     stepFour:"Lieferung und Montage", stepFourText:"Wir schließen das Projekt mit einer professionellen Montage vor Ort ab.",
     contactKicker:"PROJEKT STARTEN", contactTitle:"Sie haben eine Idee? Wir machen daraus Ihren individuellen Raum.",
     contactText:"Senden Sie uns erste Informationen, Fotos oder Raummaße. Wir melden uns für die weitere Abstimmung.",
-    phoneLabel:"Geschäftsleitung · Telefon / WhatsApp", managerEmailLabel:"Direkte E-Mail der Geschäftsleitung", offersLabel:"Angebote und Anfragen", ownerLabel:"Geschäftsleitung",
+    phoneLabel:"Geschäftsleitung · Telefon / WhatsApp", emailLabel:"E-Mail", ownerLabel:"Geschäftsleitung",
     openWhatsapp:"WhatsApp-Chat öffnen →", rights:"Alle Rechte vorbehalten.",
     footerCoverage:"Wir sind in Kroatien, der Europäischen Union und der Schweiz tätig."
   }
