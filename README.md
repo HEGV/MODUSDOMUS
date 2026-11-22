@@ -19,7 +19,7 @@ Datoteka `index.html` mora biti direktno u glavnom direktoriju.
 - Fotografije galerije: `assets/gallery`
 - Fotografije usluga: `assets/services`
 
-- WhatsApp gumbi prvo pokušavaju otvoriti instaliranu aplikaciju, a zatim koriste web-verziju kao rezervu.
+- WhatsApp gumbi koriste poveznicu wa.me (na mobitelu otvara aplikaciju, na računalu WhatsApp Web).
 
 ## Verzija 10
 Naslovne fotografije u dijelu Naše usluge zamijenjene su novim slikama. Fotografije su prilagođene širokim karticama tako da je cijeli motiv vidljiv bez rastezanja.
@@ -33,3 +33,17 @@ Naslovne fotografije u dijelu Naše usluge zamijenjene su novim slikama. Fotogra
 - Privremeni kontakt e-mail: `krunoslav.hegedic@gmail.com`.
 - Uklonjene su poslovne e-mail adrese na `@domus-modus.hr`.
 - Provjeren je vidljivi naziv brenda: `Modus Domus`.
+
+## Verzija 14 (22.11.2026)
+- Hrvatski je uvijek zadani jezik: `https://modusdomus.hr/` uvijek se otvara na hrvatskom. Engleski i njemački samo preko `?lang=en` / `?lang=de` (izbor se više ne pamti u pregledniku).
+- Uklonjena fotografija `dnevni-4.jpg` (sadržavala je tuđi vodeni žig).
+- Fotografije u formatu WebP s JPEG rezervom; naslovna i fotografije usluga u više veličina za mobitel i računalo. Početna stranica: oko 0,4–0,6 MB umjesto 1,6 MB.
+- Font Manrope smanjen na potrebne znakove (hrvatski, njemački, engleski).
+- Nova stranica `404.html`, slika za dijeljenje `assets/og-modus-domus.jpg` (1200 × 630), strukturirani podaci (JSON-LD), `og:locale`.
+- Plutajući WhatsApp gumb skriven je dok je vidljiv naslovni dio (više ne prekriva tekst na mobitelu).
+- Bolji kontrast i veće površine za dodir; uklonjen neiskorišteni CSS.
+
+### Nove datoteke slika
+- Naslovna: `assets/hero-interior-960/1600/2000.webp`, rezerva `assets/hero-interior-1600.jpg`
+- Usluge: `assets/services/<naziv>-900.webp`, `-1800.webp`, rezerva `-1200.jpg`
+- Galerija: uz svaki `.jpg` postoji `.webp` istog naziva. Kod dodavanja nove fotografije spremite obje verzije.

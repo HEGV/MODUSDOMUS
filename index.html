@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
   <meta name="description" content="Modus Domus – dizajn i izrada namještaja po mjeri u Hrvatskoj, Europskoj uniji i Švicarskoj." />
   <title>Modus Domus | Dizajn i izrada namještaja</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=20260927" />
+  <link rel="preload" as="image" type="image/webp" href="assets/hero-interior-1600.webp" imagesrcset="assets/hero-interior-960.webp 960w, assets/hero-interior-1600.webp 1600w, assets/hero-interior-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="style.css?v=20261122" />
   <link rel="canonical" href="https://modusdomus.hr/">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta property="og:type" content="website">
@@ -17,15 +19,33 @@
   <meta property="og:title" content="Modus Domus | Dizajn i izrada namještaja">
   <meta property="og:description" content="Modus Domus – dizajn i izrada namještaja po mjeri u Hrvatskoj, Europskoj uniji i Švicarskoj.">
   <meta property="og:url" content="https://modusdomus.hr/">
-  <meta property="og:image" content="https://modusdomus.hr/assets/gallery/kuhinja-3.jpg">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:image" content="https://modusdomus.hr/assets/og-modus-domus.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="assets/fonts/fonts.css?v=20260927">
+  <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261122">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Modus Domus",
+    "description": "Dizajn i izrada namještaja po mjeri: kuhinje, spavaće sobe, ugradbeni ormari, dnevni boravci i kompletni interijeri.",
+    "url": "https://modusdomus.hr/",
+    "logo": "https://modusdomus.hr/assets/logo-modus-domus.png",
+    "image": "https://modusdomus.hr/assets/og-modus-domus.jpg",
+    "telephone": "+385915208349",
+    "email": "krunoslav.hegedic@gmail.com",
+    "areaServed": [{"@type": "Country", "name": "Hrvatska"}, {"@type": "Country", "name": "Švicarska"}, "Europska unija"],
+    "inLanguage": ["hr", "en", "de"]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content" data-ui="skip">Preskoči na sadržaj</a>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Modus Domus početna" data-ui-label="home">
-      <img src="assets/logo-modus-domus-transparent.png" alt="Modus Domus logo" width="616" height="324" decoding="async">
+      <picture><source srcset="assets/logo-modus-domus.webp" type="image/webp"><img src="assets/logo-modus-domus-transparent.png" alt="Modus Domus logo" width="616" height="324" decoding="async" fetchpriority="high"></picture>
     </a>
 
     <button type="button" class="menu-toggle" aria-label="Otvori izbornik" aria-expanded="false" aria-controls="main-navigation" data-ui-label="menuOpen">☰</button>
@@ -38,7 +58,7 @@
       <a href="#contact" data-i18n="navContact">Kontakt</a>
     </nav>
 
-    <div class="language-switcher" aria-label="Odabir jezika" data-ui-label="language">
+    <div class="language-switcher" role="group" aria-label="Odabir jezika" data-ui-label="language">
       <button type="button" class="lang active" data-lang="hr" aria-label="Hrvatski" aria-pressed="true">HR</button>
       <button type="button" class="lang" data-lang="en" aria-label="English" aria-pressed="false">EN</button>
       <button type="button" class="lang" data-lang="de" aria-label="Deutsch" aria-pressed="false">DE</button>
@@ -47,6 +67,10 @@
 
   <main id="main-content" tabindex="-1">
     <section id="home" class="hero">
+      <picture class="hero-media">
+        <source type="image/webp" srcset="assets/hero-interior-960.webp 960w, assets/hero-interior-1600.webp 1600w, assets/hero-interior-2000.webp 2000w" sizes="100vw">
+        <img src="assets/hero-interior-1600.jpg" alt="" width="1600" height="1200" fetchpriority="high" decoding="async">
+      </picture>
       <div class="hero-overlay"></div>
       <div class="floating-shape shape-one"></div>
       <div class="floating-shape shape-two"></div>
@@ -92,6 +116,10 @@
 
       <div class="service-grid">
         <article class="service-card image-kitchen">
+          <picture class="card-media">
+            <source type="image/webp" srcset="assets/services/kuhinje-900.webp 900w, assets/services/kuhinje-1800.webp 1800w" sizes="(max-width: 700px) 100vw, 50vw">
+            <img src="assets/services/kuhinje-1200.jpg" alt="" width="1200" height="450" loading="lazy" decoding="async">
+          </picture>
           <div>
             <span>01</span>
             <h3 data-i18n="serviceKitchen">Kuhinje po mjeri</h3>
@@ -100,6 +128,10 @@
         </article>
 
         <article class="service-card image-bedroom">
+          <picture class="card-media">
+            <source type="image/webp" srcset="assets/services/spavace-sobe-ormari-900.webp 900w, assets/services/spavace-sobe-ormari-1800.webp 1800w" sizes="(max-width: 700px) 100vw, 50vw">
+            <img src="assets/services/spavace-sobe-ormari-1200.jpg" alt="" width="1200" height="450" loading="lazy" decoding="async">
+          </picture>
           <div>
             <span>02</span>
             <h3 data-i18n="serviceBedroom">Spavaće sobe i ormari</h3>
@@ -108,6 +140,10 @@
         </article>
 
         <article class="service-card image-living">
+          <picture class="card-media">
+            <source type="image/webp" srcset="assets/services/dnevni-boravci-900.webp 900w, assets/services/dnevni-boravci-1800.webp 1800w" sizes="(max-width: 700px) 100vw, 50vw">
+            <img src="assets/services/dnevni-boravci-1200.jpg" alt="" width="1200" height="450" loading="lazy" decoding="async">
+          </picture>
           <div>
             <span>03</span>
             <h3 data-i18n="serviceLiving">Dnevni boravci</h3>
@@ -116,6 +152,10 @@
         </article>
 
         <article class="service-card image-interior">
+          <picture class="card-media">
+            <source type="image/webp" srcset="assets/services/kompletni-interijeri-900.webp 900w, assets/services/kompletni-interijeri-1800.webp 1800w" sizes="(max-width: 700px) 100vw, 50vw">
+            <img src="assets/services/kompletni-interijeri-1200.jpg" alt="" width="1200" height="450" loading="lazy" decoding="async">
+          </picture>
           <div>
             <span>04</span>
             <h3 data-i18n="serviceInterior">Kompletni interijeri</h3>
@@ -135,19 +175,19 @@
       <div class="gallery-preview">
         <a class="preview-card preview-large" href="galerija.html#kuhinje" aria-label="Otvori galeriju kuhinja" data-ui-label="kitchens">
           <figure>
-            <img src="assets/gallery/kuhinja-3.jpg" alt="Kuhinja po mjeri" loading="lazy" width="627" height="489" decoding="async">
+            <picture><source srcset="assets/gallery/kuhinja-3.webp" type="image/webp"><img src="assets/gallery/kuhinja-3.jpg" alt="Kuhinja po mjeri" loading="lazy" width="627" height="489" decoding="async"></picture>
             <figcaption data-i18n="galleryKitchens">Kuhinje po mjeri</figcaption>
           </figure>
         </a>
         <a class="preview-card" href="galerija.html#sobe" aria-label="Otvori galeriju soba i ormara" data-ui-label="rooms">
           <figure>
-            <img src="assets/gallery/sobe-4.jpg" alt="Sobe i ormari po mjeri" loading="lazy" width="1100" height="733" decoding="async">
+            <picture><source srcset="assets/gallery/sobe-4.webp" type="image/webp"><img src="assets/gallery/sobe-4.jpg" alt="Sobe i ormari po mjeri" loading="lazy" width="1100" height="733" decoding="async"></picture>
             <figcaption data-i18n="galleryRooms">Sobe i ormari po mjeri</figcaption>
           </figure>
         </a>
         <a class="preview-card" href="galerija.html#dnevni" aria-label="Otvori galeriju dnevnih prostora" data-ui-label="living">
           <figure>
-            <img src="assets/gallery/dnevni-1.jpg" alt="Moderan dnevni prostor" loading="lazy" width="515" height="388" decoding="async">
+            <picture><source srcset="assets/gallery/dnevni-1.webp" type="image/webp"><img src="assets/gallery/dnevni-1.jpg" alt="Moderan dnevni prostor" loading="lazy" width="515" height="388" decoding="async"></picture>
             <figcaption data-i18n="galleryLiving">Moderan dnevni prostor</figcaption>
           </figure>
         </a>
@@ -182,7 +222,7 @@
 
         <a class="contact-item" href="mailto:krunoslav.hegedic@gmail.com">
           <span data-i18n="emailLabel">E-mail</span>
-          <strong>krunoslav.hegedic@gmail.com</strong>
+          <strong>krunoslav.hegedic<wbr>@gmail.com</strong>
         </a>
 
         <a class="contact-cta js-whatsapp-launch" href="https://wa.me/385915208349" data-i18n="openWhatsapp">Otvori WhatsApp razgovor →</a>
@@ -191,19 +231,19 @@
   </main>
 
   <footer>
-    <img src="assets/logo-modus-domus-transparent.png" alt="Modus Domus" width="616" height="324" decoding="async">
+    <picture><source srcset="assets/logo-modus-domus.webp" type="image/webp"><img src="assets/logo-modus-domus-transparent.png" alt="Modus Domus" width="616" height="324" decoding="async" loading="lazy"></picture>
     <p>© <span id="year"></span> Modus Domus. <span data-i18n="rights">Sva prava pridržana.</span></p>
     <p data-i18n="footerCoverage">Poslujemo u Hrvatskoj, Europskoj uniji i Švicarskoj.</p>
   </footer>
 
-  <a class="floating-whatsapp js-whatsapp-launch" href="https://wa.me/385915208349" aria-label="WhatsApp">
+  <a class="floating-whatsapp js-whatsapp-launch" data-floating-whatsapp href="https://wa.me/385915208349" aria-label="WhatsApp">
     <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
       <path fill="currentColor" d="M19.11 17.21c-.26-.13-1.53-.75-1.77-.84-.24-.09-.41-.13-.59.13-.17.26-.67.84-.82 1.01-.15.17-.3.2-.56.07-.26-.13-1.08-.4-2.06-1.27-.76-.68-1.28-1.52-1.43-1.78-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.07-.13-.59-1.42-.8-1.94-.21-.51-.43-.44-.59-.45h-.5c-.17 0-.45.07-.69.32-.24.26-.91.89-.91 2.17s.93 2.52 1.06 2.69c.13.17 1.83 2.79 4.43 3.91.62.27 1.1.43 1.48.55.62.2 1.18.17 1.62.1.49-.07 1.53-.62 1.75-1.22.22-.6.22-1.11.15-1.22-.06-.11-.24-.17-.5-.3Z"/>
       <path fill="currentColor" d="M16.04 3.2A12.62 12.62 0 0 0 5.2 22.3L3.5 28.8l6.66-1.75A12.62 12.62 0 1 0 16.04 3.2Zm0 22.94c-1.99 0-3.93-.54-5.62-1.57l-.4-.24-3.95 1.04 1.05-3.85-.26-.4a10.31 10.31 0 1 1 9.18 5.02Z"/>
     </svg>
   </a>
 
-  <script src="site-common.js?v=20260927"></script>
-  <script src="script.js?v=20260927"></script>
+  <script src="site-common.js?v=20261122"></script>
+  <script src="script.js?v=20261122"></script>
 </body>
 </html>

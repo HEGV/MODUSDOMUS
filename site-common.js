@@ -2,16 +2,18 @@
 (() => {
   'use strict';
   const languages = ['hr', 'en', 'de'];
-  const storageKey = 'modusDomusLanguage';
   const validLanguage = value => languages.includes(value);
+  // Croatian is the default. Only an explicit ?lang=en|de switches the language,
+  // so https://modusdomus.hr/ always opens in Croatian (no remembered choice).
   function getLanguage() {
     const requested = new URLSearchParams(window.location.search).get('lang');
-    if (validLanguage(requested)) return requested;
-    try {
-      const saved = localStorage.getItem(storageKey);
-      if (validLanguage(saved)) return saved;
-    } catch (_) { /* The website also works when storage is unavailable. */ }
-    return 'hr';
+    return validLanguage(requested) ? requested : 'hr';
+  }
+
+  // Croatian URLs stay clean (no ?lang=hr), matching the canonical URL.
+  function setLangParam(url, lang) {
+    if (lang === 'hr') url.searchParams.delete('lang');
+    else url.searchParams.set('lang', lang);
   }
 
   const ui = {
@@ -64,7 +66,6 @@
     'dnevni-1.jpg': ['Moderan TV zid', 'Modern TV wall', 'Moderne TV-Wand'],
     'dnevni-2.jpg': ['TV element po mjeri', 'Custom TV unit', 'TV-Möbel nach Mass'],
     'dnevni-3.jpg': ['Dnevni prostor s drvenim detaljima', 'Living space with wood details', 'Wohnbereich mit Holzdetails'],
-    'dnevni-4.jpg': ['Kompletan dnevni prostor', 'Complete living space', 'Kompletter Wohnbereich'],
     'dnevni-5.jpg': ['Zidni element za dnevni boravak', 'Living room wall unit', 'Wandelement für das Wohnzimmer']
   };
 
@@ -111,14 +112,17 @@
       if (raw.startsWith('#')) return;
       const url = new URL(raw, window.location.href);
       if (url.origin === window.location.origin && /(?:\/|\/index\.html|\/galerija\.html)$/.test(url.pathname)) {
-        url.searchParams.set('lang', lang);
+        setLangParam(url, lang);
         link.setAttribute('href', url.pathname + url.search + url.hash);
       }
     });
-    try { localStorage.setItem(storageKey, lang); } catch (_) { /* Optional preference. */ }
+    try {
+      // Remove the old remembered choice so returning visitors also get Croatian by default.
+      localStorage.removeItem('modusDomusLanguage');
+    } catch (_) { /* Storage may be unavailable. */ }
     try {
       const url = new URL(window.location.href);
-      url.searchParams.set('lang', lang);
+      setLangParam(url, lang);
       history.replaceState(null, '', url.pathname + url.search + url.hash);
     } catch (_) { /* Local file previews may disallow history updates. */ }
     return lang;

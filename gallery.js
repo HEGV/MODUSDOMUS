@@ -1,7 +1,7 @@
 const galleryTranslations={
-  hr:{back:"← Povratak na početnu",kicker:"ODABRANI RADOVI",title:"Galerija namještaja po mjeri",intro:"Odaberite kategoriju. Fotografije su prikazane bez rastezanja i nepotrebnog rezanja.",filterAll:"Svi radovi",filterRooms:"Sobe i ormari",filterKitchens:"Kuhinje",filterLiving:"Dnevni prostori",rooms:"Sobe i ormari po mjeri",kitchens:"Kuhinje po mjeri",living:"Moderni dnevni prostori",ctaTitle:"Imate ideju za svoj prostor?",cta:"Kontaktirajte nas →"},
-  en:{back:"← Back to home",kicker:"SELECTED WORK",title:"Custom furniture gallery",intro:"Choose a category. Photos are shown without stretching or unnecessary cropping.",filterAll:"All projects",filterRooms:"Bedrooms and wardrobes",filterKitchens:"Kitchens",filterLiving:"Living spaces",rooms:"Bedrooms and custom wardrobes",kitchens:"Custom kitchens",living:"Modern living spaces",ctaTitle:"Do you have an idea for your space?",cta:"Contact us →"},
-  de:{back:"← Zurück zur Startseite",kicker:"AUSGEWÄHLTE ARBEITEN",title:"Galerie für Möbel nach Mass",intro:"Wählen Sie eine Kategorie. Die Fotos werden ohne Verzerrung oder unnötigen Beschnitt gezeigt.",filterAll:"Alle Arbeiten",filterRooms:"Schlafzimmer und Schränke",filterKitchens:"Küchen",filterLiving:"Wohnbereiche",rooms:"Schlafzimmer und Einbauschränke",kitchens:"Küchen nach Mass",living:"Moderne Wohnbereiche",ctaTitle:"Sie haben eine Idee für Ihren Raum?",cta:"Kontaktieren Sie uns →"}
+  hr:{back:"← Povratak na početnu",kicker:"ODABRANI RADOVI",title:"Galerija namještaja po mjeri",intro:"Izbor naših radova po mjeri: sobe i ormari, kuhinje i dnevni prostori.",filterAll:"Svi radovi",filterRooms:"Sobe i ormari",filterKitchens:"Kuhinje",filterLiving:"Dnevni prostori",rooms:"Sobe i ormari po mjeri",kitchens:"Kuhinje po mjeri",living:"Moderni dnevni prostori",ctaTitle:"Imate ideju za svoj prostor?",cta:"Kontaktirajte nas →"},
+  en:{back:"← Back to home",kicker:"SELECTED WORK",title:"Custom furniture gallery",intro:"A selection of our made-to-measure work: bedrooms and wardrobes, kitchens and living spaces.",filterAll:"All projects",filterRooms:"Bedrooms and wardrobes",filterKitchens:"Kitchens",filterLiving:"Living spaces",rooms:"Bedrooms and custom wardrobes",kitchens:"Custom kitchens",living:"Modern living spaces",ctaTitle:"Do you have an idea for your space?",cta:"Contact us →"},
+  de:{back:"← Zurück zur Startseite",kicker:"AUSGEWÄHLTE ARBEITEN",title:"Galerie für Möbel nach Mass",intro:"Eine Auswahl unserer Arbeiten nach Mass: Schlafzimmer und Schränke, Küchen und Wohnbereiche.",filterAll:"Alle Arbeiten",filterRooms:"Schlafzimmer und Schränke",filterKitchens:"Küchen",filterLiving:"Wohnbereiche",rooms:"Schlafzimmer und Einbauschränke",kitchens:"Küchen nach Mass",living:"Moderne Wohnbereiche",ctaTitle:"Sie haben eine Idee für Ihren Raum?",cta:"Kontaktieren Sie uns →"}
 };
 
 const langButtons = document.querySelectorAll('.gallery-lang');
@@ -29,8 +29,10 @@ document.querySelectorAll('[data-full]').forEach(button => {
       return;
     }
     opener = button;
-    lightboxImg.src = button.dataset.full;
-    lightboxImg.alt = button.querySelector('img').alt;
+    const thumb = button.querySelector('img');
+    // Reuse the already loaded file (WebP where supported, otherwise JPEG).
+    lightboxImg.src = thumb.currentSrc || button.dataset.full;
+    lightboxImg.alt = thumb.alt;
     scrollPosition = window.scrollY;
     originalBodyStyle = document.body.getAttribute('style');
     document.body.style.position = 'fixed';

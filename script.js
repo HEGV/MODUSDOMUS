@@ -146,3 +146,16 @@ document.querySelectorAll('.process-grid > div').forEach(card => {
     resetTimer = setTimeout(() => card.classList.remove('is-tapped'), 650);
   }, { passive: true });
 });
+
+// Floating WhatsApp button: hidden while the hero (with its own WhatsApp button) is on screen,
+// so it never covers the hero text on small phones. Without IntersectionObserver it simply stays visible.
+const floatingWhatsapp = document.querySelector('[data-floating-whatsapp]');
+const hero = document.getElementById('home');
+if (floatingWhatsapp && hero && 'IntersectionObserver' in window) {
+  new IntersectionObserver(([entry]) => {
+    const hidden = entry.isIntersecting && entry.intersectionRatio >= 0.35;
+    floatingWhatsapp.classList.toggle('is-hidden', hidden);
+    floatingWhatsapp.setAttribute('aria-hidden', String(hidden));
+    floatingWhatsapp.tabIndex = hidden ? -1 : 0;
+  }, { threshold: 0.35 }).observe(hero);
+}

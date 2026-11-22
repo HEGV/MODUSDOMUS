@@ -9,9 +9,9 @@ img{display:block;max-width:100%}
   backdrop-filter:blur(14px);border-bottom:1px solid rgba(7,26,51,.08)
 }
 .gallery-brand img{width:230px;height:70px;object-fit:contain;object-position:left}
-.back-link{margin-left:auto;font-weight:800;font-size:.9rem}
+.back-link{margin-left:auto;font-weight:800;font-size:.9rem;padding:10px 0}
 .gallery-languages{display:flex;gap:7px}
-.gallery-lang{border:0;background:transparent;padding:6px;cursor:pointer;font-weight:800;color:#7c8490}
+.gallery-lang{border:0;background:transparent;padding:6px;cursor:pointer;font-weight:800;color:#5c6470}
 .gallery-lang.active{color:var(--navy);border-bottom:2px solid var(--gold)}
 main{padding:0 7vw 80px}
 .gallery-hero{padding:90px 0 65px;max-width:900px}
@@ -116,3 +116,7 @@ main:focus{outline:none}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .gallery-photo:hover img{transform:none}
 }
+
+/* Device optimisation, 2026-11-22 */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.gallery-photo picture{display:block}
