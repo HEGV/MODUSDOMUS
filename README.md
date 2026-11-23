@@ -50,5 +50,5 @@ Naslovne fotografije u dijelu Naše usluge zamijenjene su novim slikama. Fotogra
 
 ## Blagdanska čestitka (grana `weihnachten`, još nije objavljeno)
 - Odjeljak „Sretni blagdani” ispod naslovnog dijela, snijeg u naslovnom dijelu i gumb „Sretni blagdani”.
-- Prikazuje se automatski od 1. prosinca do 6. siječnja (prema datumu posjetitelja). Pregled u bilo kojem trenutku: `?praznici=1`, skrivanje: `?praznici=0`.
+- Prikazuje se automatski od 28. studenoga do 6. siječnja (prema datumu posjetitelja). Pregled u bilo kojem trenutku: `?praznici=1`, skrivanje: `?praznici=0`.
 - Tekstovi na hrvatskom, engleskom i njemačkom u `script.js` (ključevi `holiday…`).

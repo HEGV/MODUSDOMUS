@@ -92,12 +92,13 @@ const translations = {
 };
 
 
-// Holiday greeting: shown automatically from 1 December to 6 January (visitor's local date).
+// Holiday greeting: shown automatically from 28 November to 6 January (visitor's local date).
 // Preview at any time with ?praznici=1, hide with ?praznici=0.
 (function holidaySeason() {
   const param = new URLSearchParams(window.location.search).get('praznici');
   const now = new Date();
-  const inSeason = now.getMonth() === 11 || (now.getMonth() === 0 && now.getDate() <= 6);
+  const month = now.getMonth(), day = now.getDate();
+  const inSeason = (month === 10 && day >= 28) || month === 11 || (month === 0 && day <= 6);
   if (param === '1' || (param !== '0' && inSeason)) {
     document.documentElement.classList.add('is-holiday');
     document.querySelectorAll('[data-holiday]').forEach(element => { element.hidden = false; });
