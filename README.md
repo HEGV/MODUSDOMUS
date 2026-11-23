@@ -47,3 +47,8 @@ Naslovne fotografije u dijelu Naše usluge zamijenjene su novim slikama. Fotogra
 - Naslovna: `assets/hero-interior-960/1600/2000.webp`, rezerva `assets/hero-interior-1600.jpg`
 - Usluge: `assets/services/<naziv>-900.webp`, `-1800.webp`, rezerva `-1200.jpg`
 - Galerija: uz svaki `.jpg` postoji `.webp` istog naziva. Kod dodavanja nove fotografije spremite obje verzije.
+
+## Blagdanska čestitka (grana `weihnachten`, još nije objavljeno)
+- Odjeljak „Sretni blagdani” ispod naslovnog dijela, snijeg u naslovnom dijelu i gumb „Sretni blagdani”.
+- Prikazuje se automatski od 1. prosinca do 6. siječnja (prema datumu posjetitelja). Pregled u bilo kojem trenutku: `?praznici=1`, skrivanje: `?praznici=0`.
+- Tekstovi na hrvatskom, engleskom i njemačkom u `script.js` (ključevi `holiday…`).

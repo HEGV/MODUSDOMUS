@@ -1,5 +1,7 @@
 const translations = {
   hr: {
+    holidayBadge:"Sretni blagdani", holidayKicker:"SRETNI BLAGDANI", holidayTitle:"Sretan Božić i sretna Nova godina!",
+    holidayText:"Hvala vam na povjerenju u protekloj godini. Želimo vam mirne i tople blagdane u krugu obitelji te puno zdravlja, sreće i uspjeha u novoj godini.", holidaySign:"Vaš tim Modus Domus",
     navAbout:"O nama", navServices:"Usluge", navProjects:"Projekti", navProcess:"Proces", navContact:"Kontakt",
     heroEyebrow:"DIZAJN • IZRADA • MONTAŽA",
     heroTitle:"Namještaj po mjeri za prostor koji govori vašim stilom.",
@@ -28,6 +30,8 @@ const translations = {
     footerCoverage:"Poslujemo u Hrvatskoj, Europskoj uniji i Švicarskoj."
   },
   en: {
+    holidayBadge:"Happy holidays", holidayKicker:"HAPPY HOLIDAYS", holidayTitle:"Merry Christmas and a Happy New Year!",
+    holidayText:"Thank you for your trust over the past year. We wish you peaceful, warm holidays with your loved ones and plenty of health, happiness and success in the new year.", holidaySign:"Your Modus Domus team",
     navAbout:"About", navServices:"Services", navProjects:"Projects", navProcess:"Process", navContact:"Contact",
     heroEyebrow:"DESIGN • PRODUCTION • INSTALLATION",
     heroTitle:"Bespoke furniture for spaces that reflect your style.",
@@ -56,6 +60,8 @@ const translations = {
     footerCoverage:"We operate in Croatia, the European Union and Switzerland."
   },
   de: {
+    holidayBadge:"Frohe Festtage", holidayKicker:"FROHE FESTTAGE", holidayTitle:"Frohe Weihnachten und ein gutes neues Jahr!",
+    holidayText:"Danke für Ihr Vertrauen im vergangenen Jahr. Wir wünschen Ihnen besinnliche, warme Festtage im Kreis Ihrer Liebsten und viel Gesundheit, Glück und Erfolg im neuen Jahr.", holidaySign:"Ihr Modus-Domus-Team",
     navAbout:"Über uns", navServices:"Leistungen", navProjects:"Projekte", navProcess:"Ablauf", navContact:"Kontakt",
     heroEyebrow:"DESIGN • FERTIGUNG • MONTAGE",
     heroTitle:"Möbel nach Mass für Räume, die Ihren Stil widerspiegeln.",
@@ -85,6 +91,18 @@ const translations = {
   }
 };
 
+
+// Holiday greeting: shown automatically from 1 December to 6 January (visitor's local date).
+// Preview at any time with ?praznici=1, hide with ?praznici=0.
+(function holidaySeason() {
+  const param = new URLSearchParams(window.location.search).get('praznici');
+  const now = new Date();
+  const inSeason = now.getMonth() === 11 || (now.getMonth() === 0 && now.getDate() <= 6);
+  if (param === '1' || (param !== '0' && inSeason)) {
+    document.documentElement.classList.add('is-holiday');
+    document.querySelectorAll('[data-holiday]').forEach(element => { element.hidden = false; });
+  }
+})();
 
 const languageButtons = document.querySelectorAll('.lang');
 function setLanguage(lang) {

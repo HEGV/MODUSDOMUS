@@ -11,7 +11,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" as="image" type="image/webp" href="assets/hero-interior-1600.webp" imagesrcset="assets/hero-interior-960.webp 960w, assets/hero-interior-1600.webp 1600w, assets/hero-interior-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=20261122" />
+  <link rel="stylesheet" href="style.css?v=20261201" />
   <link rel="canonical" href="https://modusdomus.hr/">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261122">
+  <link rel="stylesheet" href="assets/fonts/fonts.css?v=20261201">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -74,6 +74,7 @@
       <div class="hero-overlay"></div>
       <div class="floating-shape shape-one"></div>
       <div class="floating-shape shape-two"></div>
+      <div class="snow" data-holiday aria-hidden="true" hidden></div>
 
       <div class="hero-content">
         <p class="eyebrow" data-i18n="heroEyebrow">DIZAJN • IZRADA • MONTAŽA</p>
@@ -86,9 +87,24 @@
           <a class="btn btn-secondary js-whatsapp-launch" href="https://wa.me/385915208349" data-i18n="whatsappButton">WhatsApp</a>
         </div>
         <div class="coverage" data-i18n="coverage">Hrvatska • Europska unija • Švicarska</div>
+        <a class="holiday-badge" href="#praznici" data-holiday data-i18n="holidayBadge" hidden>Sretni blagdani</a>
       </div>
 
       <a class="scroll-indicator" href="#about" aria-label="Pomakni se prema dolje" data-ui-label="scroll">↓</a>
+    </section>
+
+    <!-- Blagdanska čestitka: vidljiva samo od 1. prosinca do 6. siječnja (ili s ?praznici=1 za pregled) -->
+    <section id="praznici" class="holiday" data-holiday aria-labelledby="holiday-title" hidden>
+      <div class="snow" aria-hidden="true"></div>
+      <div class="holiday-inner">
+        <svg class="holiday-art" viewBox="0 0 240 240" width="240" height="240" aria-hidden="true" focusable="false"><rect x="98" y="78" width="44" height="17" rx="4" fill="#c79a68"/><rect x="106" y="86" width="28" height="1.4" rx=".7" fill="#fff" fill-opacity=".18"/><rect x="84" y="100" width="72" height="17" rx="4" fill="#b98a5a"/><rect x="92" y="108" width="56" height="1.4" rx=".7" fill="#fff" fill-opacity=".18"/><rect x="70" y="122" width="100" height="17" rx="4" fill="#a97c50"/><rect x="78" y="130" width="84" height="1.4" rx=".7" fill="#fff" fill-opacity=".18"/><rect x="56" y="144" width="128" height="17" rx="4" fill="#c79a68"/><rect x="64" y="152" width="112" height="1.4" rx=".7" fill="#fff" fill-opacity=".18"/><rect x="42" y="166" width="156" height="17" rx="4" fill="#b98a5a"/><rect x="50" y="174" width="140" height="1.4" rx=".7" fill="#fff" fill-opacity=".18"/><rect x="28" y="188" width="184" height="17" rx="4" fill="#a97c50"/><rect x="36" y="196" width="168" height="1.4" rx=".7" fill="#fff" fill-opacity=".18"/><rect x="108" y="210" width="24" height="24" rx="3" fill="#7a5636"/><polygon points="120.0,31.0 124.7,43.5 138.1,44.1 127.6,52.5 131.2,65.4 120.0,58.0 108.8,65.4 112.4,52.5 101.9,44.1 115.3,43.5" fill="#c6a04d"/><circle cx="98" cy="100" r="5.5" fill="#e9d5a1"/><circle cx="146" cy="122" r="5.5" fill="#c6a04d"/><circle cx="80" cy="144" r="5.5" fill="#c6a04d"/><circle cx="160" cy="166" r="5.5" fill="#e9d5a1"/><circle cx="120" cy="188" r="5.5" fill="#c6a04d"/><circle cx="52" cy="188" r="5.5" fill="#e9d5a1"/></svg>
+        <div class="holiday-copy">
+          <p class="section-kicker" data-i18n="holidayKicker">SRETNI BLAGDANI</p>
+          <h2 id="holiday-title" data-i18n="holidayTitle">Sretan Božić i sretna Nova godina!</h2>
+          <p class="holiday-text" data-i18n="holidayText">Hvala vam na povjerenju u protekloj godini. Želimo vam mirne i tople blagdane u krugu obitelji te puno zdravlja, sreće i uspjeha u novoj godini.</p>
+          <p class="holiday-sign" data-i18n="holidaySign">Vaš tim Modus Domus</p>
+        </div>
+      </div>
     </section>
 
     <section id="about" class="section about">
@@ -243,7 +259,7 @@
     </svg>
   </a>
 
-  <script src="site-common.js?v=20261122"></script>
-  <script src="script.js?v=20261122"></script>
+  <script src="site-common.js?v=20261201"></script>
+  <script src="script.js?v=20261201"></script>
 </body>
 </html>
