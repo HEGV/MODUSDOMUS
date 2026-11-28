@@ -1,6 +1,7 @@
 const translations = {
   hr: {
-    holidayTitle:"Sretan Božić i sretna Nova godina!", holidayBig1:"Sretan Božić", holidayBig2:"i sretna Nova godina!", holidayThanks:"Hvala vam na povjerenju. Vaš tim Modus Domus",
+    holidayBadge:"Sretni blagdani", holidayKicker:"SRETNI BLAGDANI", holidayTitle:"Sretan Božić i sretna Nova godina!",
+    holidayText:"Hvala vam na povjerenju u protekloj godini. Želimo vam mirne i tople blagdane u krugu obitelji te puno zdravlja, sreće i uspjeha u novoj godini.", holidaySign:"Vaš tim Modus Domus",
     navAbout:"O nama", navServices:"Usluge", navProjects:"Projekti", navProcess:"Proces", navContact:"Kontakt",
     heroEyebrow:"DIZAJN • IZRADA • MONTAŽA",
     heroTitle:"Namještaj po mjeri za prostor koji govori vašim stilom.",
@@ -29,7 +30,8 @@ const translations = {
     footerCoverage:"Poslujemo u Hrvatskoj, Europskoj uniji i Švicarskoj."
   },
   en: {
-    holidayTitle:"Merry Christmas and a Happy New Year!", holidayBig1:"Merry Christmas", holidayBig2:"and a Happy New Year!", holidayThanks:"Thank you for your trust. Your Modus Domus team",
+    holidayBadge:"Happy holidays", holidayKicker:"HAPPY HOLIDAYS", holidayTitle:"Merry Christmas and a Happy New Year!",
+    holidayText:"Thank you for your trust over the past year. We wish you peaceful, warm holidays with your loved ones and plenty of health, happiness and success in the new year.", holidaySign:"Your Modus Domus team",
     navAbout:"About", navServices:"Services", navProjects:"Projects", navProcess:"Process", navContact:"Contact",
     heroEyebrow:"DESIGN • PRODUCTION • INSTALLATION",
     heroTitle:"Bespoke furniture for spaces that reflect your style.",
@@ -58,7 +60,8 @@ const translations = {
     footerCoverage:"We operate in Croatia, the European Union and Switzerland."
   },
   de: {
-    holidayTitle:"Frohe Weihnachten und ein gutes neues Jahr!", holidayBig1:"Frohe Weihnachten", holidayBig2:"und ein gutes neues Jahr!", holidayThanks:"Danke für Ihr Vertrauen. Ihr Modus-Domus-Team",
+    holidayBadge:"Frohe Festtage", holidayKicker:"FROHE FESTTAGE", holidayTitle:"Frohe Weihnachten und ein gutes neues Jahr!",
+    holidayText:"Danke für Ihr Vertrauen im vergangenen Jahr. Wir wünschen Ihnen besinnliche, warme Festtage im Kreis Ihrer Liebsten und viel Gesundheit, Glück und Erfolg im neuen Jahr.", holidaySign:"Ihr Modus-Domus-Team",
     navAbout:"Über uns", navServices:"Leistungen", navProjects:"Projekte", navProcess:"Ablauf", navContact:"Kontakt",
     heroEyebrow:"DESIGN • FERTIGUNG • MONTAGE",
     heroTitle:"Möbel nach Mass für Räume, die Ihren Stil widerspiegeln.",
